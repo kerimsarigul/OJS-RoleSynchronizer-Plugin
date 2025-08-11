@@ -13,6 +13,8 @@ This OJS 3.3 plugin allows journal managers to synchronize user roles between di
     -   Secure query structure to prevent SQL Injection attacks.
 -   Multilingual support (Turkish and English) with a fallback translation mechanism for missing keys.
 
+<img width="960" height="641" alt="rolesynchronizerplugin" src="https://github.com/user-attachments/assets/a18f0034-a6f0-4128-b5c5-5b135ee59476" />
+
 ## Installation
 
 ### Method 1: Via the Plugin Gallery (Recommended)
