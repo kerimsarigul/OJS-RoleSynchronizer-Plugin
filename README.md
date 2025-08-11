@@ -91,10 +91,11 @@ This OJS 3.3 plugin allows journal managers to synchronize user roles between di
 
 ## Support
 
-For issues related to the plugin:
--   Check OJS log files.
--   Review PHP error logs.
--   Check the database connection.
+For issues, bug reports, or feature requests related to the plugin, please contact the maintainer below:
+
+-   **Maintainer:** Kerim SARIGÜL
+-   **Email:** kerim@kerimsarigul.com
+-   **GitHub:** [OJS-RoleSynchronizer-Plugin](https://github.com/kerimsarigul/OJS-RoleSynchronizer-Plugin/)
 
 ## License
 
