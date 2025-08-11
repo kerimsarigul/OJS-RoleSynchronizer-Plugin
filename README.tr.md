@@ -13,6 +13,8 @@ Bu OJS 3.3 eklentisi, aynı kurulumda bulunan farklı dergiler (bağlamlar) aras
     -   SQL Enjeksiyon saldırılarını önlemek için güvenli sorgu yapısı.
 -   Çok dilli destek (Türkçe ve İngilizce) ve çeviri anahtarı bulunmadığında yedek çeviri mekanizması.
 
+<img width="828" height="648" alt="rolesynchronizerplugin_tr" src="https://github.com/user-attachments/assets/b5c93b47-b745-4b4f-9328-fd9fd431997d" />
+
 ## Kurulum
 
 ### Yöntem 1: Eklenti Galerisi Üzerinden (Önerilen)
