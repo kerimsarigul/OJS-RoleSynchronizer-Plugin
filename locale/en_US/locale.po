@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-01T00:00:00+00:00\n"
+"Language: en_US\n"
+
+msgid "plugins.generic.roleSynchronizer.displayName"
+msgstr "Role Synchronizer Plugin"
+
+msgid "plugins.generic.roleSynchronizer.description"
+msgstr "Synchronizes user roles between journals"
+
+msgid "plugins.generic.roleSynchronizer.settings.title"
+msgstr "Role Synchronization Settings"
+
+msgid "plugins.generic.roleSynchronizer.settings.description"
+msgstr "This tool copies user roles from the selected source journal to the current journal."
+
+msgid "plugins.generic.roleSynchronizer.settings.currentJournal"
+msgstr "Current Journal"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectSource"
+msgstr "Select Source Journal"
+
+msgid "plugins.generic.roleSynchronizer.settings.chooseJournal"
+msgstr "Choose Journal..."
+
+msgid "plugins.generic.roleSynchronizer.settings.synchronize"
+msgstr "Synchronize Roles"
+
+msgid "plugins.generic.roleSynchronizer.error.noSource"
+msgstr "Please select a source journal!"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectRoles"
+msgstr "Select Roles to Synchronize"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectAllRoles"
+msgstr "Select All Roles"
+
+msgid "plugins.generic.roleSynchronizer.error.noRoles"
+msgstr "Please select roles to synchronize!"
+
+msgid "plugins.generic.roleSynchronizer.error.connection"
+msgstr "Connection error occurred. Please try again."

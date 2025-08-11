@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-01T00:00:00+00:00\n"
+"Language: tr_TR\n"
+
+msgid "plugins.generic.roleSynchronizer.displayName"
+msgstr "Rol Senkronizasyon Eklentisi"
+
+msgid "plugins.generic.roleSynchronizer.description"
+msgstr "Kullanıcı rollerini dergiler arasında senkronize eder"
+
+msgid "plugins.generic.roleSynchronizer.settings.title"
+msgstr "Rol Senkronizasyon Ayarları"
+
+msgid "plugins.generic.roleSynchronizer.settings.description"
+msgstr "Bu araç, seçilen kaynak dergideki kullanıcı rollerini mevcut dergiye kopyalar."
+
+msgid "plugins.generic.roleSynchronizer.settings.currentJournal"
+msgstr "Mevcut Dergi"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectSource"
+msgstr "Kaynak Dergiyi Seçin"
+
+msgid "plugins.generic.roleSynchronizer.settings.chooseJournal"
+msgstr "Dergi Seçiniz..."
+
+msgid "plugins.generic.roleSynchronizer.settings.synchronize"
+msgstr "Rolleri Senkronize Et"
+
+msgid "plugins.generic.roleSynchronizer.error.noSource"
+msgstr "Lütfen kaynak dergi seçiniz!"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectRoles"
+msgstr "Senkronize Edilecek Rolleri Seçin"
+
+msgid "plugins.generic.roleSynchronizer.settings.selectAllRoles"
+msgstr "Tüm Rolleri Seç"
+
+msgid "plugins.generic.roleSynchronizer.error.noRoles"
+msgstr "Lütfen senkronize edilecek rolleri seçiniz!"
+
+msgid "plugins.generic.roleSynchronizer.error.connection"
+msgstr "Bağlantı hatası oluştu. Lütfen tekrar deneyiniz."

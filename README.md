@@ -1,102 +1,96 @@
 # OJS 3.3 Role Synchronizer Plugin
 
-This OJS 3.3 plugin allows journal managers to synchronize user roles between different journals (contexts) on the same installation. It provides a UI to copy selected roles from a source journal to the current one, simplifying user management in multi-journal setups. **This is particularly useful for publishers managing multiple journals, as it provides a solution for the common need to assign reviewers and other users to the same roles across several journals.** This version includes fixes for multilingual support and enhanced security against common web vulnerabilities.
+Bu plugin OJS 3.3'te kullanıcı rollerini dergiler arası senkronize etmek için geliştirilmiştir.
 
-## Features
+## Özellikler
 
--   Copy user roles from one journal to another.
--   Preserve existing roles; only add missing roles to the target journal.
--   **Enhanced security measures:**
-    -   CSRF (Cross-Site Request Forgery) protection.
-    -   Secure query structure to prevent SQL Injection attacks.
--   Multilingual support (Turkish and English) with a fallback translation mechanism for missing keys.
+- Bir dergideki kullanıcı rollerini başka bir dergiye kopyalama
+- Mevcut rolleri koruma, sadece eksik rolleri ekleme
+- Güvenli senkronizasyon işlemi
+- Çok dilli destek (Türkçe ve İngilizce)
 
-## Installation
+## Kurulum
 
-### Method 1: Via the Plugin Gallery (Recommended)
+### Yöntem 1: Plugin Galerisi Üzerinden (Önerilen)
 
-1.  Structure the plugin files in the following directory:
+1. Plugin dosyalarını aşağıdaki klasör yapısında oluşturun:
 
-    ```
-    roleSynchronizer/
-    ├── RoleSynchronizerPlugin.php
-    ├── RoleSynchronizerHandler.inc.php
-    ├── index.php
-    ├── version.xml
-    └── locale/
-        ├── tr_TR/
-        │   └── locale.po
-        └── en_US/
-            └── locale.po
-    ```
+```
+roleSynchronizer/
+├── RoleSynchronizerPlugin.php
+├── index.php
+├── version.xml
+├── locale/
+│   ├── tr_TR/
+│   │   └── locale.po
+│   └── en_US/
+│       └── locale.po
+└── templates/
+    └── settings.tpl
+```
 
-2.  Compress the folder in `tar.gz` format:
-    ```bash
-    tar -czf roleSynchronizer.tar.gz roleSynchronizer/
-    ```
+2. Klasörü tar.gz formatında sıkıştırın:
+   ```bash
+   tar -czf roleSynchronizer.tar.gz roleSynchronizer/
+   ```
 
-3.  Log in to the OJS administration panel.
-4.  Navigate to **Settings > Website > Plugins > Upload a New Plugin**.
-5.  Upload the `roleSynchronizer.tar.gz` file.
-6.  Enable the plugin.
+3. OJS yönetici paneline giriş yapın
+4. **Settings > Website > Plugins > Upload a New Plugin**
+5. `roleSynchronizer.tar.gz` dosyasını yükleyin
+6. Plugin'i etkinleştirin
 
-### Method 2: Manual Installation
+### Yöntem 2: Manuel Kurulum
 
-1.  Copy the plugin files to the `/plugins/generic/roleSynchronizer/` directory.
-2.  Check file permissions (755 for folders, 644 for files).
-3.  Enable the plugin from the administration panel.
+1. Plugin dosyalarını `/plugins/generic/roleSynchronizer/` klasörüne kopyalayın
+2. Dosya izinlerini kontrol edin (755 klasör, 644 dosya)
+3. Plugin'i yönetici panelinden etkinleştirin
 
-## Usage
+## Kullanım
 
-1.  Log in to the target journal where roles will be copied.
-2.  Navigate to **Settings > Website > Plugins > Generic Plugins**.
-3.  Find the **Role Synchronizer** plugin.
-4.  Click the **Settings** button.
-5.  In the pop-up window, select the source journal and the roles you want to synchronize.
-6.  Click the **Synchronize** button.
+1. Rollerin kopyalanacağı (hedef) dergiye giriş yapın
+2. **Settings > Website > Plugins > Generic Plugins**
+3. **Role Synchronizer** plugin'ini bulun
+4. **Settings** butonuna tıklayın
+5. Açılan pencerede kaynak dergiyi seçin
+6. **Rolleri Senkronize Et** butonuna tıklayın
+7. Onay verin
 
-## Important Notes
+## Önemli Notlar
 
--   ⚠️ **The operation is irreversible!** Always back up your database before running the synchronization.
--   Existing roles are not modified; only missing roles are added to users in the target journal.
--   A single user can have multiple roles.
--   Only Journal Manager and Site Admin roles can use this plugin.
+- ⚠️ **İşlem geri alınamaz!** Mutlaka önceden veritabanı yedeği alın
+- Mevcut roller değiştirilmez, sadece eksik roller eklenir
+- Aynı kullanıcı birden fazla role sahip olabilir
+- Sadece Journal Manager ve Site Admin rolleri plugin'i kullanabilir
 
-## Security Enhancements
+## Teknik Detaylar
 
--   **CSRF Protection:** Synchronization requests are validated using OJS's built-in CSRF token mechanism, preventing unauthorized requests.
--   **SQL Injection Protection:** The database queries use a parameterized query structure, preventing user input from being directly embedded into the query.
+- **Desteklenen OJS Versiyonu**: 3.3.x
+- **Veritabanı Değişikliği**: Yok
+- **Dil Desteği**: Türkçe, İngilizce
 
-## Technical Details
+## Sorun Giderme
 
--   **Supported OJS Version**: 3.3.x
--   **Database Changes**: None
--   **Language Support**: English, Turkish
+### Plugin yüklenmiyor
+- Dosya izinlerini kontrol edin
+- OJS log dosyalarını kontrol edin
+- Plugin klasör yapısının doğru olduğunu kontrol edin
 
-## Troubleshooting
+### Senkronizasyon çalışmıyor
+- Kaynak ve hedef dergilerde aynı roller var mı kontrol edin
+- PHP error log'larını kontrol edin
+- Kullanıcının yeterli yetkisi var mı kontrol edin
 
-### Plugin is not loading
--   Check file permissions.
--   Check the OJS log files.
--   Verify that the plugin folder structure is correct.
+### CSRF hatası
+- Sayfayı yenileyip tekrar deneyin
+- Tarayıcı cache'ini temizleyin
 
-### Synchronization is not working
--   Check if the same roles exist in both the source and target journals.
--   Check the PHP error logs.
--   Verify that the user has sufficient permissions.
+## Destek
 
-### CSRF error
--   Refresh the page and try again.
--   Clear your browser's cache.
+Plugin ile ilgili sorunlar için:
+- OJS log dosyalarını kontrol edin
+- PHP error log'larını inceleyin
+- Veritabanı bağlantısını kontrol edin
 
-## Support
+## Lisans
 
-For issues, bug reports, or feature requests related to the plugin, please contact the maintainer below:
-
--   **Maintainer:** Kerim SARIGÜL
--   **Email:** kerim@kerimsarigul.com
--   **GitHub:** [OJS-RoleSynchronizer-Plugin](https://github.com/kerimsarigul/OJS-RoleSynchronizer-Plugin/)
-
-## License
-
-This plugin is distributed under the GPL v3 license.
+Bu plugin GPL v3 lisansı altında dağıtılmaktadır.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+<version>
+    <application>roleSynchronizer</application>
+    <type>plugins.generic</type>
+    <release>1.0.0.0</release>
+    <date>2025-08-10</date>
+    <lazy-load>1</lazy-load>
+    <class>RoleSynchronizerPlugin</class>
+    <maintainer>
+        <name>Kerim SARIGÜL</name>
+        <email>kerim@kerimsarigul.com</email>
+    </maintainer>
+</version>
